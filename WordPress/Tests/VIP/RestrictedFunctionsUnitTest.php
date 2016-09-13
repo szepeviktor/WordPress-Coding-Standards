@@ -25,7 +25,7 @@ class WordPress_Tests_VIP_RestrictedFunctionsUnitTest extends AbstractSniffUnitT
 			3  => 1,
 			5  => 1,
 			21 => 1,
-			34 => ( PHP_VERSION_ID >= 50300 ) ? 0 : 1,
+			34 => (int) ( PHP_VERSION_ID < 50300 ),
 			36 => 1,
 			38 => 1,
 			40 => 1,
