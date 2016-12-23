@@ -1,6 +1,25 @@
 [![Build Status](https://travis-ci.org/WordPress-Coding-Standards/WordPress-Coding-Standards.png?branch=master)](https://travis-ci.org/WordPress-Coding-Standards/WordPress-Coding-Standards)
 [![Total Downloads](https://poser.pugx.org/wp-coding-standards/wpcs/downloads)](https://packagist.org/packages/wp-coding-standards/wpcs)
 
+- [WordPress Coding Standards for PHP_CodeSniffer](#wordpress-coding-standards-for-php-codesniffer)
+  * [Project history](#project-history)
+  * [Installation](#installation)
+    + [Composer](#composer)
+    + [Standalone](#standalone)
+  * [How to use](#how-to-use)
+    + [Command line](#command-line)
+    + [PhpStorm](#phpstorm)
+    + [Sublime Text](#sublime-text)
+        * [sublime-phpcs package](#sublime-phpcs-package)
+        * [SublimeLinter-phpcs](#sublimelinter-phpcs)
+    + [Atom](#atom)
+  * [Standards subsets](#standards-subsets)
+    + [Using a custom ruleset](#using-a-custom-ruleset)
+    + [Recommended additional rulesets](#recommended-additional-rulesets)
+  * [Fixing errors or whitelisting them](#fixing-errors-or-whitelisting-them)
+  * [Contributing](#contributing)
+  * [License](#license)
+
 # WordPress Coding Standards for PHP_CodeSniffer
 
 This project is a collection of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) rules (sniffs) to validate code developed for WordPress. It ensures code quality and adherence to coding conventions, especially the official [WordPress Coding Standards](http://make.wordpress.org/core/handbook/coding-standards/).
