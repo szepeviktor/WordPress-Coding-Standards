@@ -40,4 +40,12 @@
 	<!-- Check for PHP Parse errors. -->
 	<rule ref="Generic.PHP.Syntax" />
 
+	<!-- Make the translators comment check which is included in core stricter. -->
+	<rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
+		<type>error</type>
+	</rule>
+	<rule ref="WordPress.WP.I18n.TranslatorsCommentWrongStyle">
+		<type>error</type>
+	</rule>
+
 </ruleset>
