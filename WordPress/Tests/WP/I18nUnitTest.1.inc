@@ -29,6 +29,14 @@ esc_html__( 'There are %1$d monkeys in the %2$s', 'my-slug' ), // OK - multi-lin
  */
 _n_noop( 'I have %d cat.', "I have %d cats.", 'my-slug' ); // OK - multi-line /* */ style.
 
+/*
+ * translators: %d: number of cats.
+ * This is a multiline comment,
+ * But it also has * at the start
+ of some lines ;-)
+*/
+_n_noop( 'I have %d cat.', "I have %d cats.", 'my-slug' ); // OK - inconsistent multi-line /* */ style.
+
 /**
  * translators: %d: number of cats.
  */
@@ -62,14 +70,14 @@ esc_attr_e( 'Text to translate to %1$d languages. Another %2$s placeholder', 'my
 printf(
 	/* translators: number of monkeys, location. */
 	__( 'There are %1$d monkeys in the %2$s', 'my-slug' ),
-	intval( $number ),
+	(int) $number,
 	esc_html( $string )
 ); // Ok.
 
 /* translators: number of monkeys, location. */
 printf(
 	__( 'There are %1$d monkeys in the %2$s', 'my-slug' ),
-	intval( $number ),
+	(int) $number,
 	esc_html( $string )
 ); // Bad - comment not directly before line containing the gettext call.
 

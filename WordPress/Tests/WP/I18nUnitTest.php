@@ -123,11 +123,11 @@ class WordPress_Tests_WP_I18nUnitTest extends AbstractSniffUnitTest {
 			case 'I18nUnitTest.1.inc':
 				return array(
 					8 => 1,
-					35 => 1,
-					41 => 1,
-					44 => 1,
-					60 => 1,
-					71 => 1,
+					43 => 1,
+					49 => 1,
+					52 => 1,
+					68 => 1,
+					79 => 1,
 				);
 
 			default:
