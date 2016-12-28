@@ -359,8 +359,13 @@ class WordPress_Sniffs_WP_I18nSniff extends WordPress_Sniff {
 			$replace_regexes = array();
 			$replacements    = array();
 			for ( $i = 0; $i < $unordered_matches_count; $i++ ) {
-				$to_insert         = ( $i + 1 );
-				$to_insert        .= ( '"' !== $content[0] ) ? '$' : '\$';
+				$to_insert = ( $i + 1 );
+				if ( '"' !== $content[0] ) {
+					$to_insert .= '$';
+				} else {
+					$to_insert .= '\$';
+				}
+
 				$suggestions[ $i ] = substr_replace( $unordered_matches[ $i ], $to_insert, 1, 0 );
 
 				// Prepare the strings for use a regex.

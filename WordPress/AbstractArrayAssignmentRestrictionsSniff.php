@@ -144,10 +144,9 @@ abstract class WordPress_AbstractArrayAssignmentRestrictionsSniff extends WordPr
 				continue;
 			}
 
+			$callback = array( $this, 'callback' );
 			if ( isset( $group['callback'] ) && is_callable( $group['callback'] ) ) {
 				$callback = $group['callback'];
-			} else {
-				$callback = array( $this, 'callback' );
 			}
 
 			foreach ( $inst as $key => $assignments ) {
